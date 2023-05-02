@@ -1,0 +1,99 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+
+header h1 {
+	margin: 0;
+	font-size: 28px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+nav ul {
+	display: flex;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul li {
+	list-style: none;
+	margin-right: 20px;
+}
+
+nav ul li a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 18px;
+}
+
+nav ul li a:hover {
+	text-decoration: underline;
+}
+
+button {
+	background-color: #fff;
+	color: #333;
+	border: none;
+	padding: 10px;
+	border-radius: 0%;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+}
+
+.profile img {
+	margin-right: 20px;
+}
+
+.profile-info {
+	text-align: right;
+}
+
+table {
+    max-width: 50%;
+    margin: auto;
+    float: left;
+  }
+  
+
+table th {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: left;
+}
+
+table td {
+	border: 1px solid #ddd;
+	padding: 10px;
+}
+
+.todo-list {
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+	background-color: #000;
+	color: #fff;
+	padding: 10px;
+	width: 200px;
+}
+
+main {
+	margin-right: 240px;
+}
+
