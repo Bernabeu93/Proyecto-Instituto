@@ -52,7 +52,7 @@ button {
 	border-radius: 0%;
 }
 
-.notifications {
+.notificationes {
 	background-color: #FFA500; /* Fondo naranja */
 	color: #fff;
 	padding: 10px;
@@ -60,7 +60,7 @@ button {
 	align-items: center;
 }
 
-.notifications i {
+.notificationes i {
 	margin-right: 10px;
 }
 
@@ -107,30 +107,6 @@ table td {
 	padding: 10px;
 }
 
-.todo-list {
-	float: left;
-	margin-top: 20px;
-	margin-left: 20px;
-	background-color: #fff; /* Fondo blanco */
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-}
-
-.todo-list h2 {
-	color: #333;
-}
-
-.todo-list ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.todo-list ul li {
-	margin-bottom: 10px;
-}
-
 .school-info {
 	background-color: #fff; /* Fondo blanco */
 	padding: 20px;
@@ -164,29 +140,13 @@ footer {
 }
 
 .logo {
-	width: 20%; /* establece el ancho de la imagen en el 20% del ancho del contenedor */
+	width: 20%; 
   }
   
-  /* margen entre la tabla de notas y la lista de tareas */
+  
 #notas {
 	margin-bottom: 20px;
   }
-  
-  /* margen entre la lista de tareas y la tabla de faltas y retrasos */
-  #tareas {
-	margin-bottom: 20px;
-  }
-  
-  /* margen entre la tabla de faltas y retrasos y la sección de tutorías */
-  #faltas {
-	margin-bottom: 20px;
-  }
-  
-  /* margen entre la sección de tutorías y el footer */
-  #tutorias {
-	margin-bottom: 20px;
-  }
-  
 
   .notas-container, .todolist-container, .faltas-container, .tutorias-container {
 	margin-bottom: 20px;
@@ -207,19 +167,16 @@ footer {
 	font-weight: bold;
   }
   
-  .todolist {
-	list-style: none;
-	padding-left: 0;
-	margin-left: 25px;
-	width: auto;
+
+  #tareas {
+	margin-bottom: 20px;
   }
   
-  .todolist li {
-	margin-bottom: 5px;
-	margin-left: 25px;
-	width: auto;
+ 
+  #faltas {
+	margin-bottom: 20px;
   }
-  
+
   .faltas {
 	border-collapse: collapse;
 	width: 100%;
@@ -235,6 +192,11 @@ footer {
 	font-weight: bold;
   }
   
+
+  #tutorias {
+	margin-bottom: 20px;
+  }
+
   .tutorias {
 	list-style: none;
 	padding-left: 0;
@@ -244,13 +206,46 @@ footer {
 	margin-bottom: 5px;
   }
   
+  
+  
+  .todolist {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 25px;
+	width: auto;
+  }
+  
+  .todolist li {
+	margin-bottom: 5px;
+	margin-left: 25px;
+	width: auto;
+  }
 
   .todolist-container,
-.tutorias-container {
-  margin-top: 30px;
+  .tutorias-container {
+	margin-top: 30px;
+  }
+
+  .todo-list {
+	float: left;
+	margin-top: 20px;
+	margin-left: 20px;
+	background-color: #fff; /* Fondo blanco */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
 }
 
-style
-  #faltas-retrasos {
-    text-align: left;
-  }
+.todo-list h2 {
+	color: #333;
+}
+
+.todo-list ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.todo-list ul li {
+	margin-bottom: 10px;
+}
