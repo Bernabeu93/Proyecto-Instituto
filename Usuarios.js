@@ -10,3 +10,5 @@ function Estudiante(DNI, Nombre, Apellidos, usuario, contraseña, foto, Direccio
     this.tipo_usuario = tipo_usuario;
     this.activo = activo;
   }
+
+  const Cristian=new Estudiante("12345678A","Cristian","Bernabeu Romero","Bernabeu93","123456789","foto.jpg","Calle Falsa 123","999888444","alumno",true);
