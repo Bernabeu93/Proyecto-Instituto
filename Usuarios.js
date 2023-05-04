@@ -39,9 +39,3 @@ let estudiante1 = {
     Direccion: "Calle Lafora",
     Telefono: "345678901"
   };
-
-console.log(estudiante1.Nombre); 
-console.log(estudiante2.Direccion); 
-console.log(estudiante3.Contraseña); 
-  
-  
