@@ -2,6 +2,7 @@ body {
 	font-family: Arial, sans-serif;
 	margin: 0;
 	padding: 0;
+	background-color: #E6F1F7; /* Fondo azul claro */
 }
 
 header {
@@ -51,13 +52,31 @@ button {
 	border-radius: 0%;
 }
 
-.profile {
+.notifications {
+	background-color: #FFA500; /* Fondo naranja */
+	color: #fff;
+	padding: 10px;
 	display: flex;
 	align-items: center;
 }
 
+.notifications i {
+	margin-right: 10px;
+}
+
+.profile {
+	display: flex;
+	align-items: center;
+	margin-top: 20px;
+	background-color: #fff; /* Fondo blanco */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
 .profile img {
 	margin-right: 20px;
+	border-radius: 50%; /* Imagen redonda */
 }
 
 .profile-info {
@@ -65,11 +84,16 @@ button {
 }
 
 table {
-    max-width: 50%;
-    margin: auto;
-    float: left;
-  }
-  
+	max-width: 50%;
+	margin: auto;
+	float: left;
+	background-color: #fff; /* Fondo blanco */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
+
+}
 
 table th {
 	background-color: #333;
@@ -84,16 +108,149 @@ table td {
 }
 
 .todo-list {
-	float: right;
+	float: left;
 	margin-top: 20px;
-	margin-right: 20px;
-	background-color: #000;
+	margin-left: 20px;
+	background-color: #fff; /* Fondo blanco */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+}
+
+.todo-list h2 {
+	color: #333;
+}
+
+.todo-list ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.todo-list ul li {
+	margin-bottom: 10px;
+}
+
+.school-info {
+	background-color: #fff; /* Fondo blanco */
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	margin-top: 20px;
+	clear: both;
+}
+
+.school-info h2 {
+	color: #333;
+}
+
+.school-info ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.school-info ul li {
+	margin-bottom: 10px;
+}
+
+footer {
+	background-color: #333;
 	color: #fff;
-	padding: 10px;
-	width: 200px;
+	padding: 20px;
+	text-align: center;
+	margin-top: 20px;
+	clear: both;
 }
 
-main {
-	margin-right: 240px;
+.logo {
+	width: 20%; /* establece el ancho de la imagen en el 20% del ancho del contenedor */
+  }
+  
+  /* margen entre la tabla de notas y la lista de tareas */
+#notas {
+	margin-bottom: 20px;
+  }
+  
+  /* margen entre la lista de tareas y la tabla de faltas y retrasos */
+  #tareas {
+	margin-bottom: 20px;
+  }
+  
+  /* margen entre la tabla de faltas y retrasos y la sección de tutorías */
+  #faltas {
+	margin-bottom: 20px;
+  }
+  
+  /* margen entre la sección de tutorías y el footer */
+  #tutorias {
+	margin-bottom: 20px;
+  }
+  
+
+  .notas-container, .todolist-container, .faltas-container, .tutorias-container {
+	margin-bottom: 20px;
+  }
+  
+  .notas {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  .notas th, .notas td {
+	padding: 8px;
+	text-align: left;
+  }
+  
+  .notas th {
+	background-color: #ddd;
+	font-weight: bold;
+  }
+  
+  .todolist {
+	list-style: none;
+	padding-left: 0;
+	margin-left: 25px;
+	width: auto;
+  }
+  
+  .todolist li {
+	margin-bottom: 5px;
+	margin-left: 25px;
+	width: auto;
+  }
+  
+  .faltas {
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  .faltas th, .faltas td {
+	padding: 8px;
+	text-align: left;
+  }
+  
+  .faltas th {
+	background-color: #ddd;
+	font-weight: bold;
+  }
+  
+  .tutorias {
+	list-style: none;
+	padding-left: 0;
+  }
+  
+  .tutorias li {
+	margin-bottom: 5px;
+  }
+  
+
+  .todolist-container,
+.tutorias-container {
+  margin-top: 30px;
 }
 
+style
+  #faltas-retrasos {
+    text-align: left;
+  }
