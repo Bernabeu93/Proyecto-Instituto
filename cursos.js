@@ -15,6 +15,6 @@ class Cursos {
     }
   }
   
-const Matemáticas = new Cursos("Curso 1", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
-const Historia = new Cursos("Curso 2", 2, 3, 4, 5, 6, 7, 8, 9, 10, 1);
-const Lengua = new Cursos("Curso 3", 3, 4, 5, 6, 7, 8, 9, 10, 1, 2);
+const Matemáticas = new Cursos("Matemáticas", 1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+const Historia = new Cursos("Historia", 2, 3, 4, 5, 6, 7, 8, 9, 10, 1);
+const Lengua = new Cursos("Lengua", 3, 4, 5, 6, 7, 8, 9, 10, 1, 2);
