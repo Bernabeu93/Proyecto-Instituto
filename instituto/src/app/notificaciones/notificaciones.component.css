@@ -1,0 +1,54 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+.notification {
+	border: 1px solid #ccc;
+	margin: 20px;
+	padding: 10px;
+}
+
+.notification h2 {
+	margin-top: 0;
+}
+
+.notification p {
+	margin-bottom: 5px;
+}
+
+.timestamp {
+	color: #888;
+	font-size: 0.8em;
+	float: right;
+}
+
+ul {
+    background-color: #F6DDE0; /* Fondo rosa pastel */
+    color: #333; /* Letras oscuras */
+    list-style-type: none; /* Quitar las viñetas de la lista */
+    padding: 0;
+  }
+  
+  li {
+    display: inline-block; /* Alinear los elementos de la lista en línea */
+    margin-right: 20px; /* Espacio entre los elementos */
+  }
+  
+  a {
+    color: #333; /* Letras oscuras */
+    text-decoration: none; /* Quitar subrayado de los enlaces */
+  }
+  
+  a:hover {
+    color: #666; /* Letras más claras al pasar el cursor sobre el enlace */
+  }
+  
