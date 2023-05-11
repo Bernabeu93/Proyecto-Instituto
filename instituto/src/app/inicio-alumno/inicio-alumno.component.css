@@ -176,7 +176,11 @@ footer {
   #faltas {
 	margin-bottom: 20px;
   }
-
+  
+  .faltas-container {
+	margin-bottom: 20px;
+  }
+  
   .faltas {
 	border-collapse: collapse;
 	width: 100%;
@@ -191,6 +195,18 @@ footer {
 	background-color: #ddd;
 	font-weight: bold;
   }
+  
+  .faltas-container table {
+	margin: 0 auto;
+	width: 80%;
+  }
+  
+  table.faltas {
+	margin: 20px auto 40px;
+	width: 80%;
+  }
+  
+
   
 
   #tutorias {
