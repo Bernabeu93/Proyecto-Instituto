@@ -4,5 +4,5 @@ export interface AlumnoCrear {
     nombre: string;
     apellidos: string;
     usuario: string;
-    contraseña: string;
+    password: string;
   }
