@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './alumnos.component.html',
   styleUrls: ['./alumnos.component.css']
 })
+
+
 export class AlumnosComponent implements OnInit {
 
 alumno: AlumnoCrear = {

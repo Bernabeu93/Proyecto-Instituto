@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
+//imports: [ BrowserModule, FormsModule],
 
 
 import { AppComponent } from './app.component';
@@ -17,12 +19,17 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
     InicioAlumnoComponent,
     NotificacionesComponent,
     BackNotasComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    AppComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserModule,
+    FormsModule
   ],
+
+
   providers: [],
   bootstrap: [AppComponent]
 })

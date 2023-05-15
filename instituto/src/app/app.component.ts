@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Instituto Cavanilles';
-  cosita ="esta es la pedrada para explicar las cosas";
 }
