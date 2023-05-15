@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tabla de Notas</title>
+	<link rel="stylesheet" type="text/css" href="NotasEstilo.css">
+</head>
+<body>
+	<!-- Barra de navegación -->
+	<nav>
+		<a href="#">Inicio</a>
+		<a href="#">Perfil de Alumno</a>
+		<a href="#">Notificaciones</a>
+	</nav>
+
+	<!-- Botones desplegables -->
+	<div>
+		<label for="alumno">Alumno:</label>
+		<select id="alumno">
+			<option value="alumno1">Alumno 1</option>
+			<option value="alumno2">Alumno 2</option>
+			<option value="alumno3">Alumno 3</option>
+		</select>
+
+		<label for="curso">Curso:</label>
+		<select id="curso">
+			<option value="curso1">Curso 1</option>
+			<option value="curso2">Curso 2</option>
+			<option value="curso3">Curso 3</option>
+		</select>
+
+		<label for="asignatura">Asignatura:</label>
+		<select id="asignatura">
+			<option value="asignatura1">Asignatura 1</option>
+			<option value="asignatura2">Asignatura 2</option>
+			<option value="asignatura3">Asignatura 3</option>
+		</select>
+	</div>
+
+	<!-- Tabla de notas -->
+	<table>
+		<thead>
+			<tr>
+				<th>Alumno</th>
+				<th>Curso</th>
+					<th>Asignatura</th>
+				<th>Nota</th>
+				<th>Detalles</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>Alumno 1</td>
+				<td>Curso 1</td>
+				<td>Asignatura 1</td>
+				<td>9.5</td>
+				<td><button class="modal-button">Detalles</button></td>
+			</tr>
+			<tr>
+				<td>Alumno 2</td>
+				<td>Curso 2</td>
+				<td>Asignatura 2</td>
+				<td>8.2</td>
+				<td><button class="modal-button">Detalles</button></td>
+			</tr>
+			<tr>
+				<td>Alumno 3</td>
+				<td>Curso 3</td>
+				<td>Asignatura 3</td>
+				<td>7.9</td>
+				<td><button class="modal-button">Detalles</button></td>
+			</tr>
+		</tbody>
+	</table>
+
+	<!-- Modal -->
+	<div class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<h2>Detalles de la nota</h2>
+			<p>Detalles de la nota aquí...</p>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
