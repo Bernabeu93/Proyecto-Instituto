@@ -8,6 +8,7 @@ import { InicioAlumnoComponent } from './inicio-alumno/inicio-alumno.component';
 import { NotificacionesComponent } from './notificaciones/notificaciones.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BackNotasComponent } from './back-notas/back-notas.component';
+import { AlumnosComponent } from './alumnos/alumnos.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BackNotasComponent } from './back-notas/back-notas.component';
     IndexComponent,
     InicioAlumnoComponent,
     NotificacionesComponent,
-    BackNotasComponent
+    BackNotasComponent,
+    AlumnosComponent
   ],
   imports: [
     BrowserModule,
