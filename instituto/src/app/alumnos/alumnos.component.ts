@@ -1,4 +1,4 @@
-import { AlumnoCrear } from './../alumnos';
+import { alumnos } from './../mock-alumnos';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,16 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./alumnos.component.css']
 })
 
-
 export class AlumnosComponent implements OnInit {
 
-alumno: AlumnoCrear = {
+  alumno: alumnos ;
 
-  id: 1, dni:'12345678T', nombre: 'Jorge' ,apellidos: 'García González', usuario:'frodo_bolsón', password:'12345'
-
-};
-
-constructor() { }
+  constructor() { }
 
   ngOnInit() {
   }

@@ -1,3 +1,4 @@
+<div *ngIf="alumno"></div>
 <h2>{{alumno.nombre | uppercase}} Detalles</h2>
 <div><span>id: </span>{{alumno.id}}</div>
 <div><span>name: </span>{{alumno.nombre}}</div>
@@ -6,7 +7,14 @@
 <div><span>contraseña </span>{{alumno.password}}</div>
 
 <div>
-    <label>name:
-      <input [(ngModel)]="alumno.nombre" placeholder="nombre"/>
-    </label>
-  </div>
+  <label>name:
+    <input [(ngModel)]="alumno.nombre" placeholder="nombre"/>
+  </label>
+</div>
+
+<h2>Alumnos</h2>
+<ul class="alumno">
+  <li>
+    <span class="badge">{{alumno.id}}</span> {{alumno.nombre}}
+  </li>
+</ul>
