@@ -1,20 +1,14 @@
-<div *ngIf="alumno"></div>
-<h2>{{alumno.nombre | uppercase}} Detalles</h2>
-<div><span>id: </span>{{alumno.id}}</div>
-<div><span>name: </span>{{alumno.nombre}}</div>
-<div><span>apellidos: </span>{{alumno.apellidos}}</div>
-<div><span>usuario: </span>{{alumno.usuario}}</div>
-<div><span>contraseña </span>{{alumno.password}}</div>
-
-<div>
-  <label>name:
-    <input [(ngModel)]="alumno.nombre" placeholder="nombre"/>
-  </label>
-</div>
 
 <h2>Alumnos</h2>
-<ul class="alumno">
-  <li>
-    <span class="badge">{{alumno.id}}</span> {{alumno.nombre}}
+<ul class="alumnos">
+  <li *ngFor="let alumno of listaAlumnos">
+    <button type="button" (click)="alumnoClick(alumno)">
+      <span class="badge">{{alumno.id}}</span>
+      <span class="name">{{alumno.nombre}}</span>
+      <span class="apellidos">{{alumno.apellidos}}</span>
+      <span class="usuario">{{alumno.usuario}}</span>
+      <span class="password">{{alumno.password}}</span>
+    </button>
   </li>
 </ul>
+
