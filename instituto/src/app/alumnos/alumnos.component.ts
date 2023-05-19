@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumnoCrear } from './../alumnos';
-import { alumnos } from './../mock-alumnos';
+import { AlumnosService } from './alumnos.service';
 
 @Component({
   selector: 'app-alumnos',
@@ -10,14 +10,16 @@ import { alumnos } from './../mock-alumnos';
 export class AlumnosComponent implements OnInit {
   listaAlumnos: AlumnoCrear[] = [];
 
-  constructor() { }
+  constructor(private alumnosService: AlumnosService) { }
 
-  ngOnInit() {
-    this.listaAlumnos = alumnos;
+  getAlumnos(): void {
+    this.alumnosService.getAlumnos()
+      .subscribe(alumnos => this.listaAlumnos = alumnos);
+    // Llama al método getAlumnos() en el servicio AlumnosService y asigna la lista de alumnos al componente
   }
-
-  alumnoClick(alumno: AlumnoCrear) {
-    console.log('Alumno clickeado:', alumno);
-    // Aquí puedes realizar la lógica adicional que desees
+  
+  ngOnInit(): void {
+    this.getAlumnos();
+    // En el ciclo de vida ngOnInit(), llama al método getAlumnos() para obtener la lista de alumnos al inicializar el componente
   }
 }
