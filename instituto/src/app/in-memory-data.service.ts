@@ -7,7 +7,7 @@ import { AlumnoCrear } from './alumnos';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const usuariosDB: AlumnoCrear[] = [
+    const usuariosDB= [
       { id: 1, dni: '12345678T', nombre: 'Jorge', apellidos: 'García González', usuario: 'frodo_bolsón', password: '12345' },
       { id: 2, dni: '98765432A', nombre: 'Marcos', apellidos: 'Rodríguez López', usuario: 'arwen_undómiel', password: 'abcde' },
       { id: 3, dni: '54321098H', nombre: 'Ana', apellidos: 'Pérez Sánchez', usuario: 'samwise_gamgee', password: 'qwerty' },
