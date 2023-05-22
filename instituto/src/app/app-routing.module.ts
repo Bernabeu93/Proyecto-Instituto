@@ -1,3 +1,4 @@
+import { MensajeComponent } from './alumnos/mensaje.component';
 import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IndexComponent } from './index/index.component';

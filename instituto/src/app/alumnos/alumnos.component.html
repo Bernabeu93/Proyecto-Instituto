@@ -1,14 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Usuario</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let alumno of listaAlumnos">
+      <td>{{alumno.id}}</td>
+      <td>{{alumno.nombre}}</td>
+      <td>{{alumno.apellidos}}</td>
+      <td>{{alumno.usuario}}</td>
+      <td>{{alumno.password}}</td>
+    </tr>
+  </tbody>
+</table>
 
-<h2>Alumnos</h2>
-<ul class="alumnos">
-  <li *ngFor="let alumno of listaAlumnos">
-    <button type="button" (click)="(alumno)">
-      <span class="badge">{{alumno.id}}</span>
-      <span class="name">{{alumno.nombre}}</span>
-      <span class="apellidos">{{alumno.apellidos}}</span>
-      <span class="usuario">{{alumno.usuario}}</span>
-      <span class="password">{{alumno.password}}</span>
-    </button>
-  </li>
-</ul>
 

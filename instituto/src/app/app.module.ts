@@ -11,6 +11,7 @@ import { NotificacionesComponent } from './notificaciones/notificaciones.compone
 import { AppRoutingModule } from './app-routing.module';
 import { BackNotasComponent } from './back-notas/back-notas.component';
 import { AlumnosComponent } from './alumnos/alumnos.component';
+import { MensajeComponent } from './alumnos/mensaje.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AlumnosComponent } from './alumnos/alumnos.component';
     BackNotasComponent,
     AlumnosComponent,
     AppComponent,
+    MensajeComponent,
   ],
   imports: [
     BrowserModule,
