@@ -9,7 +9,7 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let alumno of listaAlumnos">
+    <tr *ngFor="let alumno of listaAlumnos" (click)="mostrarDetalles(alumno)">
       <td>{{alumno.id}}</td>
       <td>{{alumno.nombre}}</td>
       <td>{{alumno.apellidos}}</td>

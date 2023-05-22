@@ -24,10 +24,11 @@ export class AlumnosComponent implements OnInit {
     // En ngOnInit(), llama al método getAlumnos() para obtener la lista de alumnos al inicializar el componente
   }
 
-  onSelect(alumno: AlumnoCrear): void {
-    //this.selectedAlumnoCrear = alumno;
-    this.mensajeService.agregarMensaje(`AlumnosComponent: Alumno seleccionado id=${alumno.id}`);
-}
+  mostrarDetalles(alumno: AlumnoCrear): void {
+    console.log('Detalles del alumno:', alumno);
+    // Realiza otras acciones relacionadas con el alumno seleccionado
+  }
 
 }
+
 
