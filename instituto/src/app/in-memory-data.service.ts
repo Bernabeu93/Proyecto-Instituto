@@ -7,7 +7,7 @@ import { AlumnoCrear } from './alumnos';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
-    const usuariosDB= [
+    const alumnos= [
       { id: 1, dni: '12345678T', nombre: 'Jorge', apellidos: 'García González', usuario: 'frodo_bolsón', password: '12345' },
       { id: 2, dni: '98765432A', nombre: 'Marcos', apellidos: 'Rodríguez López', usuario: 'arwen_undómiel', password: 'abcde' },
       { id: 3, dni: '54321098H', nombre: 'Ana', apellidos: 'Pérez Sánchez', usuario: 'samwise_gamgee', password: 'qwerty' },
@@ -19,7 +19,7 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 9, dni: '97531068J', nombre: 'Isabel', apellidos: 'Torres Ramírez', usuario: 'eowyn_escudo_de_roble', password: 'letmein' },
       { id: 10, dni: '71450682S', nombre: 'Ramiro', apellidos: 'Castro Medina', usuario: 'gimli_hijo_de_glóin', password: 'monkey' }
     ];
-    return { usuariosDB };
+    return { alumnos };
   }
 
   // Overrides the genId method to ensure that an alumno always has an id.

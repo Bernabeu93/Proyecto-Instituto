@@ -13,15 +13,13 @@ export class AlumnosComponent implements OnInit {
 
   constructor(private alumnosService: AlumnosService, private mensajeService: MensajeService) { }
 
+  ngOnInit(): void {
+    this.getAlumnos();
+  }
+
   getAlumnos(): void {
     this.alumnosService.getAlumnos()
       .subscribe(alumnos => this.listaAlumnos = alumnos);
-    // Llama al método getAlumnos() en el servicio y asigna la lista de alumnos al componente
-  }
-  
-  ngOnInit(): void {
-    this.getAlumnos();
-    // En ngOnInit(), llama al método getAlumnos() para obtener la lista de alumnos al inicializar el componente
   }
 
   mostrarDetalles(alumno: AlumnoCrear): void {
@@ -29,6 +27,15 @@ export class AlumnosComponent implements OnInit {
     // Realiza otras acciones relacionadas con el alumno seleccionado
   }
 
+  addAlumno(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.alumnosService.addAlumno({ nombre: name } as AlumnoCrear)
+      .subscribe(alumno => {
+        this.listaAlumnos.push(alumno);
+      });
+  }
 }
+
 
 

@@ -15,6 +15,7 @@ import { MensajeComponent } from './alumnos/mensaje.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
+import { DetallesAlumnoComponent } from './detalles-alumno/detalles-alumno.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { InMemoryDataService } from './in-memory-data.service';
     AlumnosComponent,
     AppComponent,
     MensajeComponent,
+    DetallesAlumnoComponent,
   ],
   imports: [
     BrowserModule,

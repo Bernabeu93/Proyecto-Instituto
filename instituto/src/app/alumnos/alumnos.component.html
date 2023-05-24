@@ -8,6 +8,19 @@
       <th>Password</th>
     </tr>
   </thead>
+
+
+  <div>
+    <label>Nombre Alumno:
+      <input #AlumnoNombre />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="addAlumno(AlumnoNombre.value); AlumnoNombre.value=''">
+      add
+    </button>
+  </div>
+
+
   <tbody>
     <tr *ngFor="let alumno of listaAlumnos" (click)="mostrarDetalles(alumno)">
       <td>{{alumno.id}}</td>
