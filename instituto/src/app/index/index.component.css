@@ -1,14 +1,30 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-image: url(https://portal.edu.gva.es/cavanilles/wp-content/uploads/sites/911/2022/04/2012-04-25-15.59.54-edited-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Establece la altura al 100% de la ventana visible */
+  overflow: hidden; /* Evita que el contenido se desborde y active las barras de desplazamiento */
+}
+
 header {
   text-align: center;
+  margin-top: 50px;
+  padding: 20px;
 }
 
 h1 {
   margin-bottom: 20px;
+  color: #333;
 }
 
 main {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 100px;
+  padding: 20px;
 }
 
 button {
@@ -25,18 +41,18 @@ button {
 
 footer {
   text-align: center;
-  margin-top: 50px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Agrega un fondo semitransparente */
 }
 
 footer .logo {
-  margin: 20px 0;
   max-width: 15%;
 }
 
-main {
-  text-align: center;
-  margin-top: 100px;
-}
 
 a.boton {
   display: inline-block;
@@ -50,5 +66,12 @@ a.boton {
   border-radius: 4px;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 0.3s ease;
 }
+
+a.boton:hover {
+  background-color: #45a049;
+}
+
+
 

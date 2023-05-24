@@ -100,6 +100,20 @@ deleteAlumno(alumnos: AlumnoCrear | number): Observable<any> {
   );
 }
 
+searchAlumno(term: string): Observable<AlumnoCrear[]> {
+  if (!term.trim()) {
+    // if not search term, return empty hero array.
+    return of([]);
+  }
+  return this.http.get<AlumnoCrear[]>(`${this.alumnosUrl}/?name=${term}`)
+  .pipe(
+    tap(x => x.length ?
+       this.log(`coincidencia alumno "${term}"`) :
+       this.log(`aquí no hay alb umnos "${term}"`)),
+    catchError(this.handleError<AlumnoCrear[]>('searchAlumno', []))
+  );
+}
+
 httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };

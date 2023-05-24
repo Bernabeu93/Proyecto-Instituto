@@ -1,267 +1,128 @@
+/* Estilos generales */
+
 body {
-	font-family: Arial, sans-serif;
+	font-family: 'Arial', sans-serif;
 	margin: 0;
 	padding: 0;
-	background-color: #E6F1F7; /* Fondo azul claro */
 }
 
-header {
-	background-color: #333;
-	color: #fff;
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 	padding: 20px;
 }
 
-header h1 {
-	margin: 0;
-	font-size: 28px;
+/* Estilos del encabezado */
+
+header {
+	background-color: #1e88e5; /* Cambiar el color de fondo a un azul más vibrante */
+	padding: 20px;
 }
 
-nav {
+.logo {
 	display: flex;
 	align-items: center;
+}
+
+.logo img {
+	margin-right: 10px;
+	border-radius: 50%; /* Agregar un borde redondeado al logo */
+}
+
+.top-nav {
+	display: flex;
 	justify-content: space-between;
-	margin-top: 20px;
+	align-items: center;
 }
 
 nav ul {
+	list-style: none;
 	display: flex;
-	margin: 0;
-	padding: 0;
 }
 
 nav ul li {
-	list-style: none;
 	margin-right: 20px;
 }
 
-nav ul li a {
-	color: #fff;
-	text-decoration: none;
-	font-size: 18px;
-}
-
-nav ul li a:hover {
-	text-decoration: underline;
-}
-
-button {
-	background-color: #fff;
-	color: #333;
-	border: none;
-	padding: 10px;
-	border-radius: 0%;
-}
-
-.notificationes {
-	background-color: #FFA500; /* Fondo naranja */
-	color: #fff;
-	padding: 10px;
+.user-nav {
 	display: flex;
-	align-items: center;
 }
 
-.notificationes i {
+.user-nav a {
 	margin-right: 10px;
+	color: #000;
+	text-decoration: none;
 }
+
+/* Estilos del perfil */
 
 .profile {
 	display: flex;
 	align-items: center;
-	margin-top: 20px;
-	background-color: #fff; /* Fondo blanco */
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	margin-bottom: 20px;
 }
 
 .profile img {
+	border-radius: 50%;
 	margin-right: 20px;
-	border-radius: 50%; /* Imagen redonda */
 }
 
 .profile-info {
-	text-align: right;
+	color: #666; /* Cambiar el color de la información del perfil a un tono más suave */
 }
 
-table {
-	max-width: 50%;
-	margin: auto;
-	float: left;
-	background-color: #fff; /* Fondo blanco */
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+/* Estilos de las secciones */
+
+h2 {
+	margin-bottom: 10px;
+	color: #1e88e5; /* Cambiar el color de los títulos a un tono más vibrante */
+}
+
+.section {
 	margin-bottom: 20px;
-
+	background-color: #f5f5f5; /* Cambiar el color de fondo de las secciones a un tono más claro */
+	padding: 20px;
+	border-radius: 4px; /* Agregar bordes redondeados a las secciones */
 }
 
-table th {
-	background-color: #333;
-	color: #fff;
+.grades-table,
+.attendance-table {
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+}
+
+.grades-table th,
+.grades-table td,
+.attendance-table th,
+.attendance-table td {
 	padding: 10px;
+	border-bottom: 1px solid #ddd;
 	text-align: left;
 }
 
-table td {
-	border: 1px solid #ddd;
-	padding: 10px;
+.grades-table th:last-child,
+.grades-table td:last-child,
+.attendance-table th:last-child,
+.attendance-table td:last-child {
+	border-right: none;
 }
 
-.school-info {
-	background-color: #fff; /* Fondo blanco */
-	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
-	margin-top: 20px;
-	clear: both;
-}
-
-.school-info h2 {
-	color: #333;
-}
-
-.school-info ul {
-	padding: 0;
-	margin: 0;
+.todolist {
 	list-style: none;
+	padding-left: 0;
 }
 
-.school-info ul li {
+.todolist li {
 	margin-bottom: 10px;
 }
+
+/* Estilos del pie de página */
 
 footer {
-	background-color: #333;
-	color: #fff;
-	padding: 20px;
 	text-align: center;
-	margin-top: 20px;
-	clear: both;
-}
-
-.logo {
-	width: 20%; 
-  }
-  
-  
-#notas {
-	margin-bottom: 20px;
-  }
-
-  .notas-container, .todolist-container, .faltas-container, .tutorias-container {
-	margin-bottom: 20px;
-  }
-  
-  .notas {
-	border-collapse: collapse;
-	width: 100%;
-  }
-  
-  .notas th, .notas td {
-	padding: 8px;
-	text-align: left;
-  }
-  
-  .notas th {
-	background-color: #ddd;
-	font-weight: bold;
-  }
-  
-
-  #tareas {
-	margin-bottom: 20px;
-  }
-  
- 
-  #faltas {
-	margin-bottom: 20px;
-  }
-  
-  .faltas-container {
-	margin-bottom: 20px;
-  }
-  
-  .faltas {
-	border-collapse: collapse;
-	width: 100%;
-  }
-  
-  .faltas th, .faltas td {
-	padding: 8px;
-	text-align: left;
-  }
-  
-  .faltas th {
-	background-color: #ddd;
-	font-weight: bold;
-  }
-  
-  .faltas-container table {
-	margin: 0 auto;
-	width: 80%;
-  }
-  
-  table.faltas {
-	margin: 20px auto 40px;
-	width: 80%;
-  }
-  
-
-  
-
-  #tutorias {
-	margin-bottom: 20px;
-  }
-
-  .tutorias {
-	list-style: none;
-	padding-left: 0;
-  }
-  
-  .tutorias li {
-	margin-bottom: 5px;
-  }
-  
-  
-  
-  .todolist {
-	list-style: none;
-	padding-left: 0;
-	margin-left: 25px;
-	width: auto;
-  }
-  
-  .todolist li {
-	margin-bottom: 5px;
-	margin-left: 25px;
-	width: auto;
-  }
-
-  .todolist-container,
-  .tutorias-container {
-	margin-top: 30px;
-  }
-
-  .todo-list {
-	float: left;
-	margin-top: 20px;
-	margin-left: 20px;
-	background-color: #fff; /* Fondo blanco */
 	padding: 20px;
-	border-radius: 5px;
-	box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+	background-color: #f5f5f5;
+	margin-top: 20px;
 }
 
-.todo-list h2 {
-	color: #333;
-}
-
-.todo-list ul {
-	padding: 0;
-	margin: 0;
-	list-style: none;
-}
-
-.todo-list ul li {
-	margin-bottom: 10px;
-}
