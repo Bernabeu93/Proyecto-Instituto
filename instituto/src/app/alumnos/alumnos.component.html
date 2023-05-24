@@ -1,35 +1,47 @@
-<table>
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Nombre</th>
-      <th>Apellidos</th>
-      <th>Usuario</th>
-      <th>Password</th>
-    </tr>
-  </thead>
+<body class="background">
+  <table class="alumnos-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Usuario</th>
+        <th>Password</th>
+      </tr>
+    </thead>
 
+    <tbody>
+      <!-- Itera sobre la lista de alumnos y muestra cada uno en una fila de la tabla -->
+      <tr *ngFor="let alumno of listaAlumnos" (click)="mostrarDetalles(alumno)">
+        <td>{{alumno.id}}</td>
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.apellidos}}</td>
+        <td>{{alumno.usuario}}</td>
+        <td>{{alumno.password}}</td>
+      </tr>
+    </tbody>
+  </table>
 
-  <div>
+  <div class="add-alumno-form">
     <label>Nombre Alumno:
-      <input #AlumnoNombre />
+      <!-- Input para ingresar el nombre del alumno -->
+      <input #AlumnoNombre class="input-field" />
     </label>
-    <!-- (click) passes input value to add() and then clears the input -->
-    <button (click)="addAlumno(AlumnoNombre.value); AlumnoNombre.value=''">
-      add
+    <!-- Botón para agregar un nuevo alumno -->
+    <button class="add-button" (click)="addAlumno(AlumnoNombre.value); AlumnoNombre.value=''">
+      Añadir
     </button>
   </div>
 
-
-  <tbody>
-    <tr *ngFor="let alumno of listaAlumnos" (click)="mostrarDetalles(alumno)">
-      <td>{{alumno.id}}</td>
-      <td>{{alumno.nombre}}</td>
-      <td>{{alumno.apellidos}}</td>
-      <td>{{alumno.usuario}}</td>
-      <td>{{alumno.password}}</td>
-    </tr>
-  </tbody>
-</table>
-
-
+  <ul class="alumno-list">
+    <!-- Itera sobre la lista de alumnos y muestra cada uno en una lista -->
+    <li *ngFor="let alumno of listaAlumnos" class="alumno-item">
+      <a routerLink="/detail/{{alumno.id}}" class="alumno-link">
+        <!-- Muestra el ID del alumno y su nombre -->
+        <span class="badge">{{alumno.id}}</span> {{alumno.nombre}}
+      </a>
+      <!-- Botón para eliminar un alumno -->
+      <button class="delete" title="delete alumno" (click)="deleteAlumno(alumno)">Borrar</button>
+    </li>
+  </ul>
+</body>

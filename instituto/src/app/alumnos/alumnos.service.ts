@@ -72,8 +72,7 @@ export class AlumnosService {
   updateAlumno(alumno: AlumnoCrear): Observable<any> {
     const url = `${this.alumnosUrl}/${alumno.id}`;
 
-  // Realiza una solicitud HTTP PUT para actualizar el alumno en el servidor
-    return this.http.put(url, alumno)
+     return this.http.put(url, alumno)
     .pipe(
       tap(_ => this.log(`Alumno actualizado ID=${alumno.id}`)),
       catchError(this.handleError<any>('updateAlumno'))
@@ -90,8 +89,16 @@ addAlumno(hero: AlumnoCrear): Observable<any> {
 }
 
 
+deleteAlumno(alumnos: AlumnoCrear | number): Observable<any> {
+  const id = typeof alumnos === 'number' ? alumnos : alumnos.id;
+  const url = `${this.alumnosUrl}/${id}`;
 
-
+  return this.http.delete<AlumnoCrear>(url, this.httpOptions)
+  .pipe(
+    tap(_ => this.log(`alumno borrado id=${id}`)),
+    catchError(this.handleError<AlumnoCrear>('deleteAlumno'))
+  );
+}
 
 httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })

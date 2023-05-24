@@ -1,4 +1,5 @@
-table {
+/* Estilos para la tabla */
+.alumnos-table {
   border-collapse: collapse;
   width: 100%;
   background-color: #f5f5f5;
@@ -6,7 +7,7 @@ table {
 
 th,
 td {
-  border: 2px solid black;
+  border: 2px solid #ccc;
   padding: 8px;
   text-align: left;
 }
@@ -17,18 +18,100 @@ th {
 
 th:first-child,
 td:first-child {
-  border-left: 4px solid black;
+  border-left: 4px solid #ccc;
 }
 
 th:last-child,
 td:last-child {
-  border-right: 4px solid black;
+  border-right: 4px solid #ccc;
 }
 
 tr:first-child th {
-  border-top: 4px solid black;
+  border-top: 4px solid #ccc;
 }
 
 tr:last-child td {
-  border-bottom: 4px solid black;
+  border-bottom: 4px solid #ccc;
+}
+
+/* Estilos para la lista de alumnos */
+.alumno-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.alumno-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.alumno-link {
+  flex-grow: 1;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.badge {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 3px;
+}
+
+.delete-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* Estilos para el formulario de agregar alumno */
+.add-alumno-form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #337ab7;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.alumnos-table {
+  background-color: #ffffff;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+.alumno-list {
+  background-color: #ffffff;
+}
+
+.add-alumno-form {
+  background-color: #ffffff;
 }

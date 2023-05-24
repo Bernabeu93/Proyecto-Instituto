@@ -1,3 +1,4 @@
+import { alumnos } from './../mock-alumnos';
 import { Component, OnInit } from '@angular/core';
 import { AlumnoCrear } from './../alumnos';
 import { AlumnosService } from './alumnos.service';
@@ -35,7 +36,10 @@ export class AlumnosComponent implements OnInit {
         this.listaAlumnos.push(alumno);
       });
   }
+
+  deleteAlumno(alumno: AlumnoCrear): void {
+    this.listaAlumnos = this.listaAlumnos.filter(a => a !== alumno);
+    this.alumnosService.deleteAlumno(alumno).subscribe();
+  }
+  
 }
-
-
-
