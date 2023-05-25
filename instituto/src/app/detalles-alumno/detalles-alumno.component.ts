@@ -1,4 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
+import { AlumnoCrear } from '../alumnos';
 import { AlumnosService } from './../alumnos/alumnos.service';
 
 @Component({
@@ -6,20 +10,36 @@ import { AlumnosService } from './../alumnos/alumnos.service';
   templateUrl: './detalles-alumno.component.html',
   styleUrls: ['./detalles-alumno.component.css']
 })
-export class DetallesAlumnoComponent {
-  alumnos: any; // Asegúrate de definir alumnos o importarlo correctamente
+export class DetallesAlumnoComponent implements OnInit {
+  alumno! : AlumnoCrear;
 
-  constructor(private AlumnosService: AlumnosService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private alumnosService: AlumnosService,
+    private location: Location
+  ) {}
 
-  save(): void {
-    if (this.alumnos) {
-      this.AlumnosService.updateAlumno(this.alumnos)
-        .subscribe(() => this.goBack());
-    }
+  ngOnInit(): void {
+    this.getAlumno();
+  }
+
+  getAlumno(): void {
+    const id = parseInt(this.route.snapshot.paramMap.get('id')!, 10);
+    this.alumnosService.getAlumno(id)
+      .subscribe(alumno => this.alumno = alumno);
   }
 
   goBack(): void {
-    // Implementa la lógica para volver a la página anterior
+    this.location.back();
+  }
+
+  save(): void {
+    if (this.alumno) {
+      this.alumnosService.updateAlumno(this.alumno)
+        .subscribe(() => this.goBack());
+    }
   }
 }
+
+
  

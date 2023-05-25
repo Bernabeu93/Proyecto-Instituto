@@ -1,1 +1,11 @@
-<button (click)="save()">Guardar</button>
+<div *ngIf="alumno">
+    <h2>{{alumno.nombre | uppercase}} Details</h2>
+    <div><span>id: </span>{{alumno.id}}</div>
+    <div>
+      <label>name:
+        <input [(ngModel)]="alumno.nombre" placeholder="name"/>
+      </label>
+    </div>
+    <button (click)="goBack()">Atrás</button>
+    <button (click)="save()">Guardar</button>
+  </div>
