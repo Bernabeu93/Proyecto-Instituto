@@ -44,4 +44,17 @@
       <button class="delete" title="delete alumno" (click)="deleteAlumno(alumno)">Borrar</button>
     </li>
   </ul>
+
+  <h3>Top Alumnos</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let alumno of listaAlumnos" class="col-1-4"
+      routerLink="/detail/{{alumno.id}}">
+    <div class="module hero">
+      <h4>{{alumno.nombre}}</h4>
+    </div>
+  </a>
+</div>
+
+<app-busqueda-alumno></app-busqueda-alumno>
+
 </body>
